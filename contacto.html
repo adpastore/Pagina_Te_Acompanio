@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <!--meta de adaptacion a celulares-->
+    <meta name="viewport" content="width=device-width">
+    <title>Te Acompaño...</title>
+    <!--Reseteo de estilos predefinidos -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagenes1/favicon.png" type="image/x-icon">
+<!--    <script src="prefixfree.min.js"></script>-->
+</head>
+
+<body>
+<div class="grid-container">
+
+    <header class="header">
+
+        <div class="contenedor">
+            <div>
+                <a class="logo">
+                    <img src="imagenes1/Logo.png" alt="Logo Te Acompaño" class="src">
+                    <p>Te acompaño...</p>
+                </a>
+            </div>
+            <input type="checkbox" id="menu-check">
+            <label id="menu" for="menu-check">
+                <span id="menu-abrir">&#9776;</span>
+                <span id="menu-cerrar">X</span>
+            </label>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="porque.html">Por que...</a></li>
+                    <li><a href="colaboradores.html">Colaboradores</a></li>
+                    <li><a href="#" class="actual">Contactenos</a></li>
+                    <li><a href="personaln.html">Personal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</div>
+
+<div class="container-contacto">
+    <main class="cuerpo-contact">
+        <!-- formulario -->
+        <form id="contact-form" method="POST" action="https://formspree.io/f/meqbwdky">
+            <div class="form-group">
+                <label for="nombre"><span class="span-contact">*</span>Nombre</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ejemplo: Nicolás">
+            </div>
+            <div class="form-group">
+                <label for="apellido"><span class="span-contact">*</span>Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required placeholder="Ejemplo: Lama">
+            </div>
+            <div class="form-group">
+                <label for="email"><span class="span-contact">*</span>Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required minlength="8" placeholder="Ejemplo: nico@example.com">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" required placeholder="Ejemplo: 11-1234-1234">
+            </div>
+            <div class="form-group">
+                <label for="comentario"><span class="span-contact">*</span>Comentario:</label>
+                <textarea id="comentario" name="comentario" placeholder="Ejemplo: Hola, estoy interesado en..."
+                          rows="4"></textarea>
+            </div>
+            <button type="submit" id="submit">Enviar</button>
+        </form>
+        <!-- checkbox -->
+        <div class="fiel">
+            <fieldset class="contact-method">
+                <legend>¿Cómo le gustaría que lo contactemos?</legend>
+                <div class="radio-container">
+                    <label>
+                        <input type="radio" name="contacto" value="email" id="radio-email">
+                        Email
+                    </label>
+                    <label>
+                        <input type="radio" name="contacto" value="telefono" id="radio-telefono">
+                        Teléfono
+                    </label>
+                    <label>
+                        <input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>
+                        WhatsApp
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>¿En que horario prefiere ser atendido?</legend>
+                <select id="miSelect">
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</option>
+                </select>
+            </fieldset>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="miCheckbox" class="slider-checkbox">
+                <label for="miCheckbox" class="slider-label"></label>
+                <span class="checkbox-text">¿Le gustaría recibir novedades de Te Acompañe?</span>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <ul>
+        <li><a>&copy; Te Acompaño, 2023</a></li>
+        <li id="leyenda">"Un objetivo sin un plan es solo un deseo" Antoine de Saint-Exupéry</li>
+        <li><a>Aviso legal</a></li>
+    </ul>
+
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
